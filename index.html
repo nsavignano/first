@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+
+<!-- Google Analytic -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48301793-2', 'hightheme.com');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- ★ START HEAD -->
+<head>
+    <meta charset="UTF-8" />
+
+    <!-- ★ this line will appear only if the website is visited with an iPad -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=yes" />
+
+    <!-- ★ Thumbnail Icon representing your Brand -->
+    <link rel="shortcut icon" href="thumbnail/favicon.png" type="image/x-icon"></link>
+    
+    <meta name="description" content="First Template For EveryOne">
+    <meta name="author" content="">
+
+    <title>First | Everywhere</title>
+
+    <!-- ★ Reset STYLESHEET -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+
+    <!-- ★ Bootstrap STYLESHEET -->
+    <link rel="stylesheet" type="text/css" media="all" href="bootstrap/bootstrap.css" />
+
+    <!-- ★ Google API open-source fonts optimized for the web, to change Style visit https://www.google.com/fonts and replace this link-->
+    <link rel='stylesheet' id='google-fonts-css'  href='http://fonts.googleapis.com/css?family=Oswald%7CDroid+Sans%7CPlayfair+Display%7COpen+Sans+Condensed:300,400,800%3A300%7CRokkitt%7CShadows+Into+Light%7CMaven+Pro:400,700%7CAbel%7CMontez' type='text/css' media='all' />
+
+    <!-- ★ Nedd JQuery at the beginning in order to activate the slider   -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+
+    <!-- ★ Bootstrap STYLESHEET -->
+    <script type="text/javascript" src="jssor/js/jssor.slider.min.js"></script>
+    <script type="text/javascript" src="jssor/ui-definition.js"></script>
+
+
+    <!-- ★ MAIN STYLESHEET FOR FIRST THEME-->
+    <link rel="stylesheet" type="text/css" media="all" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/icons.css" />  
+    <link rel="stylesheet" type="text/css" media="all" href="css/media.css" />  
+    <link rel="stylesheet" type="text/css" media="all" href="css/custom.css" />
+
+    <!-- ★ THUMBNAIL FOR FIRST THEME-->
+    <link rel="shortcut icon" href="thumbnail/favicon.png" type="image/x-icon"></link>
+</head>
+<!-- ★ END HEAD -->
+
+<!-- START BODY -->
+<body class="responsive">
+
+
+<!-- ★ LOADING ALL HTML SUB-PAGE INCLUDED IN THIS MAIN PAGE-->
+<script> 
+$(function() {
+    $("#topBarHtml").load("pages/topbar.html"); 
+    $("#hearderHtml").load("pages/header.html");
+    $("#dropdownhearderHtml").load("pages/dropdownhearder.html");     
+    $("#footerHtml").load("pages/footer.html");
+    $("#copyrightHtml").load("pages/copyright.html");
+
+    $("#sliderContent").load("jssor/home_slider.html");
+}); 
+</script> 
+<!-- + LOADING ALL HTML SUB-PAGE  -->
+
+
+<!-- ★ START BLACK TOP BAR -->
+<div id="topBarHtml"></div>
+<!-- + END BLACK TOP BAR -->
+
+<!-- ★ START HEADER -->
+<div id="hearderHtml"></div>
+<div id="dropdownhearderHtml"></div>
+<!-- +  END HEADER -->
+
+
+
+
+<!-- ★ START MAIN CONTAINER -->
+<div class="container">
+<div class="col-md-6 col-md-offset-1" id="sliderContent"></div>
+</div>
+<!-- +  END MAIN CONTAINER -->
+
+
+<!-- ★ START FOOTER -->
+<div id="footerHtml"></div>
+<!-- + END FOOTER -->
+
+<!-- ★ START COPYRIGHT -->
+<div id="copyrightHtml"></div>
+<!-- + END COPYRIGHT -->
+<script type="text/javascript" src="bootstrap/bootstrap.js"></script>
+
+</body>
+<!-- + END BODY -->
+</html>

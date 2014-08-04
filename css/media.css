@@ -1,0 +1,120 @@
+/*******************************************************
+*
+*  
+Theme Name: First
+Theme URI: http://first.htightheme.com
+Version: 1.0.0
+Description: Media is a selector which readjusts components depending on the current device
+Author URI: http://hightheme.com/
+
+  Copyright: (c) 2014 High Theme.
+  License: GNU General Public License v3.0
+  License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+*
+*
+********************************************************/
+/* Not Used for now */
+.space {  min-height  : 50px }
+
+
+/* For default Media means the smallest one ----------- */
+@media only screen {
+  #hearderHtml {
+      display: none !important;
+  }
+  #dropdownhearderHtml {
+    display: block; !important;
+  }
+  #home_slider {
+      position          :       relative; 
+      left              :       0;
+      width             :       600px; 
+      height            :       300px;
+      top               :       60px;
+      padding-bottom    :       0px;
+  }
+  #copyright {
+    height            :     60px;     
+  } 
+  #copyright .container {
+      width             :     100%;
+  } 
+  #powered {
+    float: right;
+  }  
+  #footer {
+      margin-top        :     115;
+  }  
+
+}
+/* Smartphones (landscape)  - Tablet (portrait) ----------- */
+@media only screen  and (min-width: 321px) {
+
+  #home_slider {
+      padding-bottom    :       15px;
+  }
+  #footer {
+      margin-top        :     145px;
+  }  
+}
+
+/* Medium devices iPads (portrait) - Tablet (landscape )----------- */
+@media only screen  and (min-width: 769px) { 
+
+ #hearderHtml {
+    display: none !important;
+  }
+ #dropdownhearderHtml {
+    display: block; !important;
+  }  
+  #home_slider { 
+      padding-bottom    :       30px;         
+  }  
+  #copyright {
+    height              :       60px;    
+  }
+  #copyright .container {
+      width             :       100%;
+  }  
+ 
+}
+/* Medium devices iPads (landscape) - Old laptops ----------- */
+@media only screen  and (min-width: 1014px) {
+   #hearderHtml {
+    display: block !important;
+  }
+  #dropdownhearderHtml {
+    display: none; !important;
+  }  
+  #home_slider {
+      left              :     0;
+      top               :     40px;  
+      padding-bottom    :     20px;            
+  } 
+  #copyright {
+    height            :     34px;    
+  }  
+  #firstbottom  { 
+    padding-top       :     12px; 
+    padding-bottom    :     15px;
+  }  
+  
+ 
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width: 1201px) {
+
+  #home_slider {
+      left          :     0;      
+  }     
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1825px) {
+
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
