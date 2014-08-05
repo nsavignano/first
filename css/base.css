@@ -154,7 +154,7 @@ Header: Size of the header which contains Logo and Menu
 #header , #header-d {
     position 			: 		relative;
     margin-bottom 		: 		21px;
-    min-height 			: 		105px; /* min-height */
+    min-height 			: 		80px; /* min-height */
     padding-top 		: 		10px;
     padding-bottom 		:		14px;
 	border 				: 		0px solid #ffff00; 
@@ -166,13 +166,13 @@ Header: Bar below the menu
 *
 ********************************************************/
 #border-header {
-	height 				: 		12px;
+	height 				: 		3px;
 	background 			: 		#457899;  
 	border 				: 		0px solid #457899;
 	width 				:  		100%;
 	position 			: 		relative;
 	margin 				: 		0;
-	bottom 				: 		-13px;
+	bottom 				: 		-35px;
 }        
 
 /*******************************************************
@@ -228,6 +228,9 @@ li {
 	padding 			:		0;
 	list-style 			:		none;
 }
+.sf-menu {
+	line-height 		:		1.0;
+}
 /*******************************************************
 *
 You may want change color or background of the menu 
@@ -282,9 +285,22 @@ Show the popup up menu when hover on it
 .sf-menu li:hover ul {
 	left 				:		0;
 	top 				:		80px; /* match top ul list item height */
-	z-index 			:		1;
+	z-index 			:		99;
 }
-
+ul.sf-menu li:hover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul {
+	left:			10em; /* match ul width */
+	top:			10px;
+}
+ul.sf-menu li li:hover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
 /*******************************************************
 *
 gap between the logo and the menu 
@@ -330,7 +346,7 @@ NB: need to fix this with another method, I don't know ancestor but if I take th
 	border-right 		: 		10px solid transparent;
 	display 			: 		block;
 	position 			: 		relative;
-	bottom 				: 		-23px;
+	bottom 				: 		-45px;
 	left 				: 		-50%;
 	z-index 			: 		10;
 }
@@ -354,6 +370,53 @@ need to match with menu sf-menu ul li above
 	background 			: 		#8FAEC2;
 	width 				: 		180px;
 }
+/*******************************************************
+*
+Visited pseudo selector so IE6 applies text colour
+*
+********************************************************/
+.sf-menu a, .sf-menu a:visited  {
+}
+/*******************************************************
+*
+Allows to move across all menu tab without interruption
+*
+********************************************************/
+.sf-menu li {
+	background 			:		transparent;
+	height 				: 		85px;
+}
+.sf-menu li li {
+	height 				: 		auto;
+	padding 			: 		0 20px 0 15px;
+}
+.sf-menu li li li {
+}
+.sf-menu li:hover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+	outline 			:		0;
+}
+.sf-menu .sf-sub-indicator {
+	background 			: 		url("images/icons/menu_arrows.png") no-repeat scroll 7px 7px transparent;
+	line-height 		: 		9999em;
+	overflow 			: 		hidden;
+	display 			: 		block;
+	width 				: 		15px;
+	height 				: 		15px;
+	float 				: 		right;
+	margin-top 			: 		2px;
+}
+.sf-menu .current-menu-ancestor .sf-sub-indicator, .sf-menu .current-menu-item .sf-sub-indicator, .sf-menu .current_page_item .sf-sub-indicator,
+.sf-menu .current_page_ancestor .sf-sub-indicator, .sf-menu li:hover .sf-sub-indicator { background-position: 7px -8px }
+
+
+.sf-menu ul .sf-sub-indicator {
+	background-position: -9px 7px !important;
+	margin: 0;
+	position: absolute;
+	right: -18px;
+	top: 2px;
+}
+.sf-menu ul li:hover .sf-sub-indicator { background-position: -9px -8px !important; }
 /*******************************************************
 *
 chevron beside the title on teh menu
