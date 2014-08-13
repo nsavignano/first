@@ -13,23 +13,46 @@ Author URI: http://hightheme.com/
 *
 *
 ******************************************************** -->
+<link rel="stylesheet" type="text/css" media="all" href="css/topbar.css" />
 
 <div id="topbar" >
-    <div class="container >
-        <div class="row">
-            <div class="right">
-                    <a href="# " class="socials-small facebook-small" title="Facebook"  >facebook</a>
+    <div class="container">
 
-                    <a href="#" class="socials-small rss-small" title="Rss"  >rss</a>
+			<div class="marquee">  
+	    		<p id="social-marquee-id"><a href="#"  class="marquee-social-icon twitter-small"></a><a href="# " class="marquee"></a></p> 
+	            <span class="right">
+	                    <a href="# " class="socials-small facebook-small" title="Facebook"  >facebook</a>
+	                    <a href="#" class="socials-small rss-small" title="Rss"  >rss</a>
+	                    <a href="#" class="socials-small twitter-small" title="Twitter"  >twitter</a>
+	                    <a href="#" class="socials-small google-small" title="Google"  >google</a>
+	                    <a href="#" class="socials-small linkedin-small" title="Linkedin"  >linkedin</a>
+	                    <a href="#" class="socials-small pinterest-small" title="Pinterest"  >pinterest</a>
+	            </span>
+        	</div>  <!-- END MARQUEE -->
+   
+    </div> <!-- END CONTAINER -->
+</div> <!-- END TOPBAR -->
 
-                    <a href="#" class="socials-small twitter-small" title="Twitter"  >twitter</a>
+<script> 
+$(function() {
+	var commun_message = ' ★ FIRST ★ is the #1 Best Pure HTML5 & CSS3 Theme of All Time, Check on';
 
-                    <a href="#" class="socials-small google-small" title="Google"  >google</a>
-
-                    <a href="#" class="socials-small linkedin-small" title="Linkedin"  >linkedin</a>
-
-                    <a href="#" class="socials-small pinterest-small" title="Pinterest"  >pinterest</a>
-            </div>
-        </div>
-    </div>
-</div>
+	/*  a href='#' could be replaced by the real media link */
+    var marquee_tab = [
+    ['<a href="#"  class="marquee-social-icon 	twitter-small"></a>		<a href="# " class="marquee">'+commun_message+' TWITTER</a>'	],
+    ['<a href="#"  class="marquee-social-icon  	facebook-small"></a>	<a href="# " class="marquee">'+commun_message+' FACEBOOK</a>'	],
+    ['<a href="#"  class="marquee-social-icon  	linkedin-small"></a>	<a href="# " class="marquee">'+commun_message+' LINKEDIN</a>'	],
+    ['<a href="#"  class="marquee-social-icon  	google-small"></a>		<a href="# " class="marquee">'+commun_message+' GOOGLE</a>'		],
+    ['<a href="#"  class="marquee-social-icon  	rss-small"></a>			<a href="# " class="marquee">'+commun_message+' RSS</a>'		],
+    ['<a href="#"  class="marquee-social-icon  	pinterest-small"></a>	<a href="# " class="marquee">'+commun_message+' PINTEREST</a>'	]    
+    ]
+/* during the Loading Page */
+    var x = Math.floor(Math.random() * 6);
+    $('#social-marquee-id').html(marquee_tab[x]);
+/* After 3 secondes */
+    setInterval( function() { 
+        x = Math.floor(Math.random() * 6);
+        $('#social-marquee-id').html(marquee_tab[x]);
+    }, 3000 );
+ }); 
+</script>

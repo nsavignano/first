@@ -48,6 +48,9 @@ Author URI: http://hightheme.com/
   #one h1 {
     font-size: 10px;
   }
+  #social-marquee-id {
+      display     :     none;
+  }  
 }
 /* Smartphones (landscape)  - Tablet (portrait) ----------- */
 @media only screen  and (min-width: 321px) {
@@ -60,7 +63,7 @@ Author URI: http://hightheme.com/
   }  
   #one h1 {
     font-size: 22px;
-  }  
+  }   
 }
 
 /* Medium devices iPads (portrait) - Tablet (landscape )----------- */
@@ -81,7 +84,9 @@ Author URI: http://hightheme.com/
   #copyright .container {
       width             :       100%;
   }  
-
+  #social-marquee-id {
+      display     :     inline-block;
+  }
 }
 /* Medium devices iPads (landscape) - Old laptops ----------- */
 @media only screen  and (min-width: 1014px) {

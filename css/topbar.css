@@ -1,0 +1,184 @@
+/*  *******************************************************
+*
+*  
+Theme Name: First
+Theme URI: http://first.hightheme.com
+Version: 1.0.0
+Description: TOP BAR FILE ONLY CONCERN THE BLACK BAR ON THE VERY TOP OF THE PAGE
+Author URI: http://hightheme.com/
+
+    Copyright: (c) 2014 High Theme.
+    License: GNU General Public License v3.0
+    License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+*
+*
+******************************************************** */
+
+/*******************************************************
+*
+				Top black bar setting
+*
+********************************************************/
+#topbar {
+	margin-top 				: 		0;
+	background-color 		: 		#51575a;
+	height 					: 		34px;
+	overflow 				: 		hidden;
+	padding 				: 		0;
+	margin 					: 		0;
+
+}
+
+#topbar .center { 	text-align 		: 			center; }
+#topbar .left 	{ 	text-align 		: 			left; }
+#topbar .right { 
+	float 					: 		right; 
+	padding 				: 		5px; 
+	border 					: 		1px solid #999;
+	background-color 		: 		#737272;	
+}
+
+/*******************************************************
+*
+Top black bar: boxed means when is not full wide screen
+*
+********************************************************/
+.boxed #topbar {
+	margin-right 			: 		-20px;
+	margin-left				:   	-20px;
+}
+
+/*******************************************************
+*
+			Social Media on the Top black bar
+*
+********************************************************/
+a.socials, a.socials-small {
+    display 				: 		inline-block;
+    margin-right 			: 		0;
+    text-align 				: 		left;
+    text-indent 			: 		-9999px;
+}
+a.socials {
+    background-position		: 		left bottom !important;
+    height 					: 		34px;
+    width 					: 		34px;
+}
+a.socials-small {
+    background-position		: 		left bottom !important;
+    height 					: 		22px;
+    width 					: 		22px;
+}
+a.socials:hover, a.socials-small:hover {
+    background-position		: 		left top !important;
+}
+
+
+/*  *******************************************************
+*
+*
+				MARQUEE BAR
+		You can find more example on 
+http://www.hongkiat.com/blog/css3-animation-advanced-marquee/
+*
+*
+******************************************************** */
+/*  Link is not underscored */
+a {
+	text-decoration 		: 		none;
+}
+/*  TEXT COLOR */
+a.marquee {
+	color 					: 		#ccc;
+}
+a.marquee:hover {
+	color 					: 		#0097bc;
+}
+/* Set the Social MEdia Icon inside the marquee text */
+a.marquee-social-icon {
+    display 				: 		inline-block;
+    margin-right 			: 		0;
+    text-align 				: 		left;
+    text-indent 			: 		-9999px;
+    background-position		: 		left top !important;
+    height 					: 		22px;
+    width 					: 		22px;   
+    color 					: 		#ccc;     
+
+}
+.marquee {
+	width 					: 		100%;
+	height 					: 		40px;
+	margin 					:		0;
+	overflow 				: 		hidden;
+	position 				: 		relative;
+	background-color		: 		#51575a;
+    -webkit-border-radius	: 		0px;
+    border-radius 			: 		0px;
+	-webkit-transition 		: 		background-color 150ms;
+	-moz-transition 		: 		background-color 150ms;
+    transition 				: 		background-color 150ms;
+}
+.marquee p {
+	position 				: 		absolute;
+	font-family 			: 		Tahoma, Arial, sans-serif;
+	width 					: 		50%; /* mostly for all browsers */
+	height 					: 		100%;
+	margin 					: 		0;
+	line-height 			: 		40px;
+	text-align 				: 		left;
+	color 					: 		#ccc;
+    text-shadow 			: 		1px 1px 0px #000000;
+
+	transform 				:		translateX(100%);
+	-moz-transform 			:		translateX(100%);
+	-webkit-transform		: 		translateX(100%);
+}
+.marquee p:nth-child(1) {
+	animation 				: 		left-one 17s ease infinite;
+	-moz-animation 			: 		left-one 17s ease infinite;
+	-webkit-animation 		: 		left-one 17s ease infinite;
+}
+@-moz-document url-prefix() { /* if Firefox */
+	.marquee p  {
+	 	width 				: 	50%; /* depending on the size of the text, the % could be different as usual on MOZ */
+	}
+}
+
+
+/** Mozilla Firefox Keyframes **/
+@-moz-keyframes left-one {
+	0%	{
+		-moz-transform 		:	translateX(100%);
+	}
+	10% {
+		-moz-transform 		:	translateX(0);
+	}
+	40% {
+		-moz-transform 		:	translateX(0);
+	}
+	50% {
+		-moz-transform 		:	translateX(-100%);
+	}
+	100%{
+		-moz-transform 		:	translateX(-100%);
+	}
+}
+/** Webkit Keyframes **/
+@-webkit-keyframes left-one {
+	0% {
+		-webkit-transform 	:	translateX(80%);
+	}
+	10% {
+		-webkit-transform 	:	translateX(10%);
+	}
+	40% {
+		-webkit-transform 	:	translateX(20%);
+	}
+	50% {
+		-webkit-transform 	:	translateX(-100%);
+	}
+	100%{
+		-webkit-transform 	:	translateX(-100%);
+	}
+}

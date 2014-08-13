@@ -1,0 +1,53 @@
+
+/* For All IE Scroll is needed */
+html, body {
+  min-height	: 	100%; 
+  overflow 		:	scroll; /* hidden = full screen */ /* scroll = Cell phone */
+  /* clear 		: 	both; */ 
+}
+
+/*
+html
+
+    <div id="topbar">
+		<div class="inner">
+		<div id="topbar_inner" style="text-align:right">
+				
+						<a href="http://www.google.com">
+								<img id="ribbon" src="http://demo.yithemes.com/suerte/wp-content/themes/suerte/images/ribbon/contactus.png" alt="" />
+							</a>
+					
+		<ul class="topbar_links">
+
+
+css
+#topbar, #topbar p, #topbar a, #topbar ul li a { font-family: 'Droid Sans', sans-serif; }
+#topbar { 
+	background:#454545;
+	height:39px; 
+	width:100%;
+	color:#a0a0a0; 
+	z-index:29999;  
+}           
+
+#topbar ul{list-style:none; }
+#topbar ul li{line-height:39; height:39; margin:0; background:url(images/topbar_li.png) no-repeat right center;padding:0 7px;display:inline;}
+#topbar ul li div.link_login{background:url(images/topbar_li.png) no-repeat right center;padding-right:7px;}
+#topbar ul li.fast-info{position:relative; }
+#topbar ul li.right{float:right; }
+#topbar ul li.margin{margin:0 0 0 40px; }
+#topbar ul li.icon{padding-left:25px; }
+#topbar ul li.plus{background:url('images/icons/plus.png') no-repeat 9px center; padding-right:0px;}
+#topbar ul li.plus:hover{background-image:url('images/icons/less.png') }
+#topbar ul li.plus:hover div.link_login{background:none;}
+#topbar ul li.plus:hover a{color:#a0a0a0!important;}
+#topbar ul li.email{background:none;}
+#topbar ul li,#topbar ul li a{font-size:12px;font-weight:normal;line-height:39px;display:inline-block;color:#a0a0a0}
+#topbar ul li a:hover{color:#f7f7f7; }
+
+.inner                            { width:960px; position:relative; margin:0 auto; padding: 0 20px;  } 
+.inner { width:960px; margin:0 auto; position:relative; }
+#topbar_inner{position:relative;float:left;display:block;width:100%;height:39px;padding-right:60px;}
+#topbar_inner img#ribbon{position:absolute;right:-5px;top:0;z-index:1111;}
+
+*/

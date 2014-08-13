@@ -38,24 +38,23 @@ Standard Typography for this theme
 *
 ********************************************************/
 
-body, p, li, address, dd, blockquote {   } 
-h1, h2, h3, h4, h5, h6, p, dl { margin:0.8em 0 0.3em; }          
-a, a:hover { text-decoration:none }
-h1, h2, h3, h4, h5, h6 {  }
-h1, h1 a, h1 span { font-size:36px; line-height: 36px; }
-h2, h2 a, h2 span { font-size:22px; line-height: 22px; }
-h3, h3 a, h3 span { font-size:20px; line-height: 20px; }
-h4, h4 a, h4 span { font-size:18px; line-height: 18px; }
-h5, h5 a, h5 span { font-size:15px; line-height: 15px; }
-h6, h6 a, h6 span { font-size:12px; line-height: 12px; }
-i, em { font-style 		:	italic; }
-strong { font-weight 	:	bold; 	}
+
 
 html, body {
   min-height	: 	100%; 
   overflow 		:	hidden; /* hidden = full screen */ /* scroll = Cell phone */
   /* clear 		: 	both; */ 
 }
+
+/* For Mozilla Scroll is needed */
+@-moz-document url-prefix() { /* if Firefox */
+	html, body {
+	  overflow 		:	scroll; 
+
+	}
+}
+
+
 body {
   background-color: #00FFFF;
   background: -o-linear-gradient(farthest-side ellipse at 10% 0, #879180, #D6E6CB, #D6E6CB), url("../img/background.jpg");
@@ -66,7 +65,7 @@ body {
 }
 /*******************************************************
 *
-extends the menu all width long 
+extends the menu all wide long 
 *
 ********************************************************/   
 #wrapper.container {
@@ -78,7 +77,8 @@ extends the menu all width long
     min-width 			:		0;
 }
 
-
+i, em 	{ font-style 		:	italic; }
+strong 	{ font-weight 		:	bold; 	}
 p, li, address, dd, blockquote, td, th, a,
 body, h1, h2, h3, h4, h5, h6, p, dl, ul, ol,
 p label {
@@ -88,63 +88,27 @@ p label {
     font-weight 		: 		normal;
     line-height 		: 		23px;
 }
+a, a:hover { text-decoration:none }
+h1, h1 a, h1 span { font-size:32px; line-height: 32px; }
+h2, h2 a, h2 span { font-size:22px; line-height: 22px; }
+h3, h3 a, h3 span { font-size:20px; line-height: 21px; }
+h4, h4 a, h4 span { font-size:18px; line-height: 20px; }
+h5, h5 a, h5 span { font-size:15px; line-height: 19px; }
+h6, h6 a, h6 span { font-size:12px; line-height: 18px; }
+
 
 /*******************************************************
 *
-Top black bar setting
+HEADER: boxed means when is not full wide screen
 *
 ********************************************************/
-#topbar {
-	margin-top 			: 		0;
-	background-color 	: 		#51575a;
-	height 				: 		34px;
-	overflow 			: 		hidden;
-	padding 			: 		0;
-	margin 				: 		0;
-
-}
-
-#topbar .center { 	text-align 		: 			center; }
-#topbar .left 	{ 	text-align 		: 			left; }
-#topbar .right { 
-	float 				: 		right; 
-	padding 			: 		5px; 
-	border 				: 		1px solid #999;
-	background-color 	: 		#737272;	
-}
-/*******************************************************
-*
-Top black bar: boxed means when is not full wide screen
-*
-********************************************************/
-.boxed #header, .boxed #header-d .boxed #topbar {
+.boxed #header, .boxed #header-d  {
 	margin-right 		: 		-20px;
 	margin-left			:   	-20px;
 } 
-/*******************************************************
-*
-Social Media on the Top black bar
-*
-********************************************************/
-a.socials, a.socials-small {
-    display 			: 		inline-block;
-    margin-right 		: 		0;
-    text-align 			: 		left;
-    text-indent 		: 		-9999px;
-}
-a.socials {
-    background-position	: 		left bottom !important;
-    height 				: 		34px;
-    width 				: 		34px;
-}
-a.socials-small {
-    background-position	: 		left bottom !important;
-    height 				: 		22px;
-    width 				: 		22px;
-}
-a.socials:hover, a.socials-small:hover {
-    background-position	: 		left top !important;
-}
+
+
+
 
 /*******************************************************
 *
@@ -172,7 +136,7 @@ Header: Bar below the menu
 	width 				:  		100%;
 	position 			: 		relative;
 	margin 				: 		0;
-	bottom 				: 		-35px;
+	bottom 				: 		-38px;
 }        
 
 /*******************************************************
@@ -464,6 +428,7 @@ Footer is the about | contact | blog area only
     top 					: 		0px; 
 	margin-top 				: 		0px;    
  	border-top 				: 		5px solid #737272;
+
 }
 #footer h1 {
 	font-size 				: 		24px;
@@ -472,12 +437,12 @@ Footer is the about | contact | blog area only
 	padding-bottom 			: 		10px;
 	text-align: left;
 }
-#footer h3 {
+#footer h5 {
 	text-align: left;
 	color 					: 		#ccc;	
+	line-height 			: 		26px; 
 }
-#footer h3 a {
-	font-size 				: 		16px;
+#footer h5 a {
 	color 					: 		#f5b00c;
 	font-style 				: 		italic;	
 }
