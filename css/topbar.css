@@ -182,3 +182,18 @@ a.marquee-social-icon {
 		-webkit-transform 	:	translateX(-100%);
 	}
 }
+
+/* For default Media means the smallest one ----------- */
+@media only screen {
+	/*  Don't show marquee bar on very small device */
+  #social-marquee-id {
+      display     :     none;
+  } 
+}
+/* Medium devices iPads (portrait) - Tablet (landscape )----------- */
+@media only screen  and (min-width: 769px) { 
+	/*  Do show marquee bar on 769px device  and up */
+  #social-marquee-id {
+      display     :     inline-block;
+  }
+}

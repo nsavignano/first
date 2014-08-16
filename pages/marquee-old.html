@@ -1,0 +1,362 @@
+<!-- *******************************************************
+*
+*  
+Theme Name: First
+Theme URI: http://first.hightheme.com
+Version: 1.0.0
+Description: TOP BAR FILE ONLY CONCERN THE BLACK BAR ON THE VERY TOP OF THE PAGE
+Author URI: http://hightheme.com/
+
+    Copyright: (c) 2014 High Theme.
+    License: GNU General Public License v3.0
+    License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+*
+*
+******************************************************** -->
+<style type="text/css">
+/* Make it a marquee */
+h1, h2, h3 {
+	font-family: Tahoma, Arial, sans-serif;
+	color: #fff;
+    text-shadow: 1px 1px 0px #000000;
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: #0097bc;
+}
+
+.marquee {
+	width: 100%;
+	height: 40px;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #51575a;
+
+	background-color: #51575a;
+
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+
+	-webkit-transition: background-color 350ms;
+	-moz-transition: background-color 350ms;
+    transition: background-color 350ms;
+}
+
+.marquee p {
+	position: absolute;
+
+	font-family: Tahoma, Arial, sans-serif;
+
+	width: 100%;
+	height: 100%;
+
+	margin: 0;
+	line-height: 50px;
+
+	text-align: center;
+
+	color: #fff;
+    text-shadow: 1px 1px 0px #000000;
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+
+	transform:translateX(100%);
+	-moz-transform:translateX(100%);
+	-webkit-transform:translateX(100%);
+}
+.marquee p:nth-child(1) {
+	animation: left-one 20s ease infinite;
+	-moz-animation: left-one 20s ease infinite;
+	-webkit-animation: left-one 20s ease infinite;
+}
+.marquee p:nth-child(2) {
+	animation: left-two 20s ease infinite;
+	-moz-animation: left-two 20s ease infinite;
+	-webkit-animation: left-two 20s ease infinite;
+}
+.marquee.down p {
+	transform:translateY(-100%);
+	-moz-transform:translateY(-100%);
+	-webkit-transform:translateY(-100%);
+}
+.marquee.down p:nth-child(1) {
+	animation: down-one 20s ease infinite;
+	-moz-animation: down-one 20s ease infinite;
+	-webkit-animation: down-one 20s ease infinite;
+}
+.marquee.down p:nth-child(2) {
+	animation: down-two 20s ease infinite;
+	-moz-animation: down-two 20s ease infinite;
+	-webkit-animation: down-two 20s ease infinite;
+}
+.marquee.up p {	
+	transform:translateY(100%);
+	-moz-transform:translateY(100%);
+	-webkit-transform:translateY(100%);
+}
+.marquee.up p:nth-child(1) {
+	animation: up-one 20s ease infinite;
+	-moz-animation: up-one 20s ease infinite;
+	-webkit-animation: up-one 20s ease infinite;
+}
+.marquee.up p:nth-child(2) {
+	animation: up-two 20s ease infinite;
+	-moz-animation: up-two 20s ease infinite;
+	-webkit-animation: up-two 20s ease infinite;
+}
+
+/*================================
+	Move the Marquee to the Left
+==================================*/
+
+/** Mozilla Firefox Keyframes **/
+@-moz-keyframes left-one {
+	0%	{
+		-moz-transform:translateX(100%);
+	}
+	10% {
+		-moz-transform:translateX(0);
+	}
+	40% {
+		-moz-transform:translateX(0);
+	}
+	50% {
+		-moz-transform:translateX(-100%);
+	}
+	100%{
+		-moz-transform:translateX(-100%);
+	}
+}
+@-moz-keyframes left-two {
+	0% {
+		-moz-transform:translateX(100%);
+	}
+	50% {
+		-moz-transform:translateX(100%);
+	}
+	60% {
+		-moz-transform:translateX(0);		
+	}
+	90% {
+		-moz-transform:translateX(0);		
+	}
+	100%{
+		-moz-transform:translateX(-100%);
+	}
+}
+/** Webkit Keyframes **/
+@-webkit-keyframes left-one {
+	0% {
+		-webkit-transform:translateX(100%);
+	}
+	10% {
+		-webkit-transform:translateX(10%);
+	}
+	40% {
+		-webkit-transform:translateX(20%);
+	}
+	50% {
+		-webkit-transform:translateX(-100%);
+	}
+	100%{
+		-webkit-transform:translateX(-100%);
+	}
+}
+@-webkit-keyframes left-two {
+	0% {
+		-webkit-transform:translateX(100%);
+	}
+	50% {
+		-webkit-transform:translateX(100%);
+	}
+	60% {
+		-webkit-transform:translateX(20%);		
+	}
+	90% {
+		-webkit-transform:translateX(0);		
+	}
+	100%{
+		-webkit-transform:translateX(-100%);
+	}
+}
+
+/*================================
+	Move the Marquee Downwards
+==================================*/
+
+/** Mozilla Firefox Keyframes **/
+@-moz-keyframes down-one {
+	0%	{
+		-moz-transform:translateY(-100%);
+	}
+	10% {
+		-moz-transform:translateY(0);
+	}
+	40% {
+		-moz-transform:translateY(0);
+	}
+	50% {
+		-moz-transform:translateY(100%);
+	}
+	100%{
+		-moz-transform:translateY(100%);
+	}
+}
+@-moz-keyframes down-two {
+	0% {
+		-moz-transform:translateY(-100%);
+	}
+	50% {
+		-moz-transform:translateY(-100%);
+	}
+	60% {
+		-moz-transform:translateY(0);		
+	}
+	90% {
+		-moz-transform:translateY(0);		
+	}
+	100%{
+		-moz-transform:translateY(100%);
+	}
+}
+
+/** Webkit Keyframes **/
+@-webkit-keyframes down-one {
+	0% {
+		-webkit-transform:translateY(-100%);
+	}
+	10% {
+		-webkit-transform:translateY(0);
+	}
+	40% {
+		-webkit-transform:translateY(0);
+	}
+	50% {
+		-webkit-transform:translateY(100%);
+	}
+	100%{
+		-webkit-transform:translateY(100%);
+	}
+}
+@-webkit-keyframes down-two {
+	0% {
+		-webkit-transform:translateY(-100%);
+	}
+	50% {
+		-webkit-transform:translateY(-100%);
+	}
+	60% {
+		-webkit-transform:translateY(0);		
+	}
+	90% {
+		-webkit-transform:translateY(0);		
+	}
+	100%{
+		-webkit-transform:translateY(100%);
+	}
+}
+
+/*================================
+	Move the Marquee Upwards
+==================================*/
+
+/** Mozilla Firefox Keyframes **/
+@-moz-keyframes up-one {
+	0%	{
+		-moz-transform:translateY(100%);
+	}
+	10% {
+		-moz-transform:translateY(0);
+	}
+	40% {
+		-moz-transform:translateY(0);
+	}
+	50% {
+		-moz-transform:translateY(-100%);
+	}
+	100%{
+		-moz-transform:translateY(-100%);
+	}
+}
+@-moz-keyframes up-two {
+	0% {
+		-moz-transform:translateY(100%);
+	}
+	50% {
+		-moz-transform:translateY(100%);
+	}
+	60% {
+		-moz-transform:translateY(0);		
+	}
+	90% {
+		-moz-transform:translateY(0);		
+	}
+	100%{
+		-moz-transform:translateY(-100%);
+	}
+}
+
+/** Webkit Keyframes **/
+@-webkit-keyframes up-one {
+	0% {
+		-webkit-transform:translateY(100%);
+	}
+	10% {
+		-webkit-transform:translateY(0);
+	}
+	40% {
+		-webkit-transform:translateY(0);
+	}
+	50% {
+		-webkit-transform:translateY(-100%);
+	}
+	100%{
+		-webkit-transform:translateY(-100%);
+	}
+}
+@-webkit-keyframes up-two {
+	0% {
+		-webkit-transform:translateY(100%);
+	}
+	50% {
+		-webkit-transform:translateY(100%);
+	}
+	60% {
+		-webkit-transform:translateY(0);		
+	}
+	90% {
+		-webkit-transform:translateY(0);		
+	}
+	100%{
+		-webkit-transform:translateY(-100%);
+	}
+}	
+</style>
+<div id="topbar" >
+    <div class="container >
+        <span class="row"  style=" border 				: 		0px solid #ffff00" >
+<div class="marquee">  
+    <p>How to add WordPress Related Posts Without Plugins</p>  
+    <p>Automate Your  Files With Actions</p>  
+
+            <span class="right" style="background-color:inherit">
+ 
+                    <a href="# " class="socials-small facebook-small" title="Facebook"  >facebook</a>
+
+                    <a href="#" class="socials-small rss-small" title="Rss"  >rss</a>
+
+                    <a href="#" class="socials-small twitter-small" title="Twitter"  >twitter</a>
+
+                    <a href="#" class="socials-small google-small" title="Google"  >google</a>
+
+                    <a href="#" class="socials-small linkedin-small" title="Linkedin"  >linkedin</a>
+
+                    <a href="#" class="socials-small pinterest-small" title="Pinterest"  >pinterest</a>
+            </span>
+        </span>
+        </div>
+    </div>
+</div>

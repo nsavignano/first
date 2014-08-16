@@ -1,0 +1,95 @@
+/* *******************************************************
+*
+*  
+Theme Name: First
+Theme URI: http://first.hightheme.com
+Version: 1.0.0
+Description: COPYRIGHT CSS ONLY CONCERN THE LAST ZONE ON VERY BOTTOM IN THE PAGE
+Author URI: http://hightheme.com/
+
+    Copyright: (c) 2014 High Theme.
+    License: GNU General Public License v3.0
+    License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+*
+*
+******************************************************** */
+/*******************************************************
+*
+Configuration for all devices
+*
+********************************************************/
+@media only screen {
+	#copyright {
+		height 					: 		60px;
+		overflow 				:  		hidden;
+		padding 				: 		7px;
+	    background-color 		: 		#51575a;
+	    padding-bottom 			: 		0px;	   
+	    color 					: 		#ccc;
+	    position      			:     	relative;   
+	    top 					: 		0px; 
+		margin-top 				: 		0px;    
+
+	}
+	#copyright .container1 {
+	    width             		:     	100%;
+	} 	
+	/*******************************************************
+	*
+	The copyright part align left and the powered by part float Right
+	*
+	********************************************************/
+	#copyright div a span:hover 	{ background-color: #111;			}
+	#copyright div a 				{ color: #fff; font-size: 12px;  	}
+	#copyright div span 			{ color: #fff; font-size: 12px;  	}		
+	#copyright div strong 			{ color: #f5b00c; font-size: 12px; 	}
+	#copyright div strong:hover 	{ color: #abaaaa; font-size: 12px; 	}
+	/*******************************************************
+	*
+	copyrightbottom is the frame around the logo in the Copyright zone
+	*
+	********************************************************/
+	#copyrightbottom  { 
+		padding-top 		: 		22px; 
+		padding-bottom 		: 		32px;
+		border 				: 		1px solid #999;
+		background-color 	: 		#737272;	
+	}
+
+	#copyrightbottom  > img {
+		width 					: 		50px;
+	}	
+  	#powered {
+    	float 				: 		left;
+ 	 }	
+}
+/*******************************************************
+*
+Medium devices iPads (portrait) - Tablet (landscape )
+*
+********************************************************/
+@media only screen  and (min-width: 769px) {
+	#copyright {
+		height              :       60px;    
+	}
+	#copyright .container {
+		width             :       100%;
+	} 
+}
+/*******************************************************
+*
+From Medium devices iPads (landscape) - Old laptops & UP
+*
+********************************************************/
+@media only screen  and (min-width: 1014px) {
+	#copyright {
+		height            :     34px;    
+	}  
+	#copyrightbottom  { 
+		padding-top       :     14px; 
+		padding-bottom    :     15px;
+	} 
+	#powered {
+		float 			: 		right;
+	}    
+}

@@ -1,0 +1,70 @@
+/* *******************************************************
+*
+*  
+Theme Name: First
+Theme URI: http://first.hightheme.com
+Version: 1.0.0
+Description: FOOTER FILE ONLY CONCERN THE ABOUT | CONTACT BLOG ENTRY AREA 
+Author URI: http://hightheme.com/
+
+    Copyright: (c) 2014 High Theme.
+    License: GNU General Public License v3.0
+    License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+*
+*
+******************************************************** */
+
+/*******************************************************
+*
+Footer is the about | contact | blog area only
+*
+********************************************************/
+@media only screen {
+	#footer {
+		background-color 		: 		#787777;
+		height 					: 		auto;
+		overflow 				:  		hidden;
+		padding 				: 		7px;
+	    padding-bottom 			: 		50px;	   
+	    color 					: 		#f5b00c;
+	    position      			:     	relative;   
+	    top 					: 		0px; 
+		margin-top 				: 		25px;    
+	 	border-top 				: 		5px solid #737272;
+		text-align 				:		center 	
+
+	}
+	#footer h1 {
+		font-size 				: 		24px;
+		color 					: 		#ccc;
+		border-bottom 			: 		1px solid #51575a;
+		padding-bottom 			: 		10px;
+		text-align: left;
+	}
+	#footer h5 {
+		text-align: left;
+		color 					: 		#ccc;	
+		line-height 			: 		26px; 
+	}
+	#footer h5 a {
+		color 					: 		#f5b00c;
+		font-style 				: 		italic;	
+	}
+	.btn {
+		font-size 				: 		14px;
+		color 					: 		#f5b00c;
+		font-style 				: 		italic;	
+		font-weight 			: 		bold;
+	}
+
+}
+/*******************************************************
+*
+Smartphones (landscape)  - Tablet (portrait)
+*
+********************************************************/
+@media only screen  and (min-width: 321px) {
+	#footer {
+		margin-top        :     55px;
+	}  
+}

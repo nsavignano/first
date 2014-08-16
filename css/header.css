@@ -1,0 +1,73 @@
+/* *******************************************************
+*
+*  
+Theme Name: First
+Theme URI: http://first.hightheme.com
+Version: 1.0.0
+Description: HEADER CSS ONLY CONCERN THE LOGO, THE POSITION AND THE CHOICE OF THE MENU IN THE PAGE DEPENDING ON WHICH DEVICE YOU ARE ON, THE DROPDOWM INSIDE THE MENU IS ON MENUBAR.CSS
+Author URI: http://hightheme.com/
+
+    Copyright: (c) 2014 High Theme.
+    License: GNU General Public License v3.0
+    License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+*
+*
+******************************************************** */
+
+
+/*******************************************************
+*
+Configuration for all devices
+*
+********************************************************/
+@media only screen {
+	/*	border-header: bar below the menu */
+	#border-header {
+		height 				: 		3px;
+		background 			: 		#457899;  
+		border 				: 		0px solid #457899;
+		width 				:  		100%;
+		position 			: 		relative;
+		margin 				: 		0;
+		bottom 				: 		0px;
+	}  
+	/*	logo-img: Logo Brand belongs the menu */     
+	#logo-img img {
+		width 				:		120px;
+	}
+	/* menubar & border-header are not displayed on small devices */ 
+	#menubar, #border-header { 
+	  	display: none !important;
+	} 
+	/* menubardevice is displayed on small devices, this is the select html form */
+	#menubardevice { 
+		display: block !important;
+	} 
+	/* tagline & Logo position  */ 	
+	#tagline, #logo {
+		margin-top 			: 		0px;  
+		float 				: 		left;
+		font-weight 		: 		bold;
+		font-variant 		: 		small-caps;		
+	}  
+}
+
+/*******************************************************
+*
+Medium devices iPads (portrait) - Tablet (landscape )
+*
+********************************************************/
+@media only screen  and (min-width: 769px) {
+	/* tagline & Logo medium device position  */	
+	#tagline {
+		margin-top 			: 		10px;		
+	}  
+	/* menubar & border-header are now displayed on medium devices and up */ 
+	#menubar, #border-header  {
+		display: block !important;
+	}  
+	/* menubardevice is not displayed on medium small devices and up */	
+	#menubardevice {
+		display: none !important;
+	} 
+}
